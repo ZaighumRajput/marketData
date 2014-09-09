@@ -20,9 +20,29 @@ def findFile(marketDataFolder, date, what, source="IMDB"):
      return matches[0]
 
 def findFile2(marketDataFolder, date, what, source="IMDB"):
+    print "I am searching in", marketDataFolder, "for", what, "at date", date 
+    #the pattern will depend on source; need to change
     pattern = filePattern(date, what)
     fileName = re.compile(pattern + "*")
-    folderName = re.compile(date + "*")
+    dirName = re.compile(date + "$")
+    #os.listdir(marketDataFolder)
+
+    for directory in os.listdir(marketDataFolder):
+        #print directory
+        if dirName.match(directory):
+            
+            print "I found the directory", directory
+            marketDataDirectory = os.path.join(marketDataFolder, directory)
+             
+            for files in os.listdir(marketDataDirectory):
+                #print files
+
+                if fileName.match(files):
+                    print "The file that matches is", files
+                    return os.path.join(marketDataDirectory, files)
+    
+           
+   
 
 
     
@@ -37,8 +57,10 @@ def filePattern(date, what, type = "IMDB"):
 def test_correctFile(marketDataFolder,date, what ):
     '''See if it find the correct file
     '''
-    print marketDataFolder
-    print findFile(marketDataFolder,date, what)
+    #print marketDataFolder
+    print findFile2(marketDataFolder,date, what)  
+    #print findFile(marketDataFolder,date, what)
+
 
 def test_newestFile(marketDataFolder, date, what):
     '''If they are duplicate finds 
@@ -56,8 +78,8 @@ networkMD = r"//srpzyfap0003.insim.biz/ESGShare/MD"
     
     
 #use nose to run later
-test_correctFile(networkMD, "20140814", "FX") 
-test_correctFile(MD, "20140814", "FX")
+test_correctFile(networkMD, "20140818", "FX") 
+#test_correctFile(MD, "20140814", "FX")
 
 test_filePattern()
 

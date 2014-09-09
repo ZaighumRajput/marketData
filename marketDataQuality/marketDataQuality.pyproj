@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>b1c16533-50be-41ef-a17b-06ca163581e2</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>fileSearch.py</StartupFile>
+    <StartupFile>fileParsers\__init__.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -24,12 +24,93 @@
   <ItemGroup>
     <Compile Include="fileParsers\module1.py" />
     <Compile Include="fileParsers\__init__.py" />
-    <Compile Include="fileSearch.py" />
-    <Compile Include="marketDataQuality.py" />
+    <Compile Include="inputFunctions\fileSearch.py" />
+    <Compile Include="inputFunctions\marketDataQuality.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="fileParsers\" />
+    <Folder Include="fileSearchTest\" />
+    <Folder Include="fileSearchTest\MD\" />
+    <Folder Include="fileSearchTest\MD\20140814\" />
+    <Folder Include="fileSearchTest\MD\20140815\" />
+    <Folder Include="fileSearchTest\MD\20140818\" />
+    <Folder Include="inputFunctions\" />
     <Folder Include="package1\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fileParsers\__init__.pyc" />
+    <Content Include="fileSearchTest\MD\20140814\equity_imp_vol_surface20140814.csv" />
+    <Content Include="fileSearchTest\MD\20140814\equity_real_estate_index_curve20140814.csv" />
+    <Content Include="fileSearchTest\MD\20140814\EQ_Volatility_Indices_2014-08-14_0830_LON.xls" />
+    <Content Include="fileSearchTest\MD\20140814\fx_foreign_exchange20140814.csv" />
+    <Content Include="fileSearchTest\MD\20140814\fx_implied_volatility20140814.csv" />
+    <Content Include="fileSearchTest\MD\20140814\FX_Rates_20140814.csv" />
+    <Content Include="fileSearchTest\MD\20140814\illiquidity_base_curve20140814.csv" />
+    <Content Include="fileSearchTest\MD\20140814\IMDBT_20140814_MDFXIV_R_20140815112011.csv" />
+    <Content Include="fileSearchTest\MD\20140814\IMDBT_20140814_MDFX_R_20140814193010.csv" />
+    <Content Include="fileSearchTest\MD\20140814\IMDBT_20140814_MDIDXIV_R_20140815112012.csv" />
+    <Content Include="fileSearchTest\MD\20140814\IMDBT_20140814_MDIDX_R_20140815105008.csv" />
+    <Content Include="fileSearchTest\MD\20140814\IMDBT_20140814_MDIRC_R_20140814194514.csv" />
+    <Content Include="fileSearchTest\MD\20140814\IMDBT_20140814_MDIRIV_R_20140814192508.csv" />
+    <Content Include="fileSearchTest\MD\20140814\IMDBT_20140814_MDLP_R_20140814200029.csv" />
+    <Content Include="fileSearchTest\MD\20140814\IMDB_20140814_MDFXIV_R_20140815112011.csv" />
+    <Content Include="fileSearchTest\MD\20140814\IMDB_20140814_MDFX_R_20140814193010.csv" />
+    <Content Include="fileSearchTest\MD\20140814\IMDB_20140814_MDIDXIV_R_20140815112012.csv" />
+    <Content Include="fileSearchTest\MD\20140814\IMDB_20140814_MDIDX_R_20140815105008.csv" />
+    <Content Include="fileSearchTest\MD\20140814\IMDB_20140814_MDIRC_R_20140814194514.csv" />
+    <Content Include="fileSearchTest\MD\20140814\IMDB_20140814_MDIRIV_R_20140814192508.csv" />
+    <Content Include="fileSearchTest\MD\20140814\IMDB_20140814_MDLP_R_20140814200029.csv" />
+    <Content Include="fileSearchTest\MD\20140814\ir_swap_treasury20140814.csv" />
+    <Content Include="fileSearchTest\MD\20140814\ir_swap_zero_curve20140814.csv" />
+    <Content Include="fileSearchTest\MD\20140814\swaption_implied_volatility20140814.csv" />
+    <Content Include="fileSearchTest\MD\20140815\equity_imp_vol_surface20140815.csv" />
+    <Content Include="fileSearchTest\MD\20140815\equity_real_estate_index_curve20140815.csv" />
+    <Content Include="fileSearchTest\MD\20140815\EQ_Volatility_Indices_2014-08-15_0830_LON.xls" />
+    <Content Include="fileSearchTest\MD\20140815\fx_foreign_exchange20140815.csv" />
+    <Content Include="fileSearchTest\MD\20140815\fx_implied_volatility20140815.csv" />
+    <Content Include="fileSearchTest\MD\20140815\FX_Rates_20140815.csv" />
+    <Content Include="fileSearchTest\MD\20140815\illiquidity_base_curve20140815.csv" />
+    <Content Include="fileSearchTest\MD\20140815\IMDBT_20140815_MDFXIV_R_20140818112012.csv" />
+    <Content Include="fileSearchTest\MD\20140815\IMDBT_20140815_MDFX_R_20140815193010.csv" />
+    <Content Include="fileSearchTest\MD\20140815\IMDBT_20140815_MDIDXIV_R_20140818112012.csv" />
+    <Content Include="fileSearchTest\MD\20140815\IMDBT_20140815_MDIDX_R_20140818105008.csv" />
+    <Content Include="fileSearchTest\MD\20140815\IMDBT_20140815_MDIRC_R_20140815194514.csv" />
+    <Content Include="fileSearchTest\MD\20140815\IMDBT_20140815_MDIRIV_R_20140815192507.csv" />
+    <Content Include="fileSearchTest\MD\20140815\IMDBT_20140815_MDLP_R_20140815200044.csv" />
+    <Content Include="fileSearchTest\MD\20140815\IMDB_20140815_MDFXIV_R_20140818112012.csv" />
+    <Content Include="fileSearchTest\MD\20140815\IMDB_20140815_MDFX_R_20140815193010.csv" />
+    <Content Include="fileSearchTest\MD\20140815\IMDB_20140815_MDIDXIV_R_20140818112012.csv" />
+    <Content Include="fileSearchTest\MD\20140815\IMDB_20140815_MDIDX_R_20140818105008.csv" />
+    <Content Include="fileSearchTest\MD\20140815\IMDB_20140815_MDIRC_R_20140815194514.csv" />
+    <Content Include="fileSearchTest\MD\20140815\IMDB_20140815_MDIRIV_R_20140815192507.csv" />
+    <Content Include="fileSearchTest\MD\20140815\IMDB_20140815_MDLP_R_20140815200044.csv" />
+    <Content Include="fileSearchTest\MD\20140815\ir_swap_treasury20140815.csv" />
+    <Content Include="fileSearchTest\MD\20140815\ir_swap_zero_curve20140815.csv" />
+    <Content Include="fileSearchTest\MD\20140815\swaption_implied_volatility20140815.csv" />
+    <Content Include="fileSearchTest\MD\20140818\equity_imp_vol_surface20140818.csv" />
+    <Content Include="fileSearchTest\MD\20140818\equity_real_estate_index_curve20140818.csv" />
+    <Content Include="fileSearchTest\MD\20140818\EQ_Volatility_Indices_2014-08-18_0830_LON.xls" />
+    <Content Include="fileSearchTest\MD\20140818\fx_foreign_exchange20140818.csv" />
+    <Content Include="fileSearchTest\MD\20140818\fx_implied_volatility20140818.csv" />
+    <Content Include="fileSearchTest\MD\20140818\FX_Rates_20140818.csv" />
+    <Content Include="fileSearchTest\MD\20140818\illiquidity_base_curve20140818.csv" />
+    <Content Include="fileSearchTest\MD\20140818\IMDBT_20140818_MDFXIV_R_20140819112011.csv" />
+    <Content Include="fileSearchTest\MD\20140818\IMDBT_20140818_MDFX_R_20140818193013.csv" />
+    <Content Include="fileSearchTest\MD\20140818\IMDBT_20140818_MDIDXIV_R_20140819112011.csv" />
+    <Content Include="fileSearchTest\MD\20140818\IMDBT_20140818_MDIDX_R_20140819105010.csv" />
+    <Content Include="fileSearchTest\MD\20140818\IMDBT_20140818_MDIRC_R_20140818194519.csv" />
+    <Content Include="fileSearchTest\MD\20140818\IMDBT_20140818_MDIRIV_R_20140818192509.csv" />
+    <Content Include="fileSearchTest\MD\20140818\IMDBT_20140818_MDLP_R_20140818200036.csv" />
+    <Content Include="fileSearchTest\MD\20140818\IMDB_20140818_MDFXIV_R_20140819112011.csv" />
+    <Content Include="fileSearchTest\MD\20140818\IMDB_20140818_MDFX_R_20140818193013.csv" />
+    <Content Include="fileSearchTest\MD\20140818\IMDB_20140818_MDIDXIV_R_20140819112011.csv" />
+    <Content Include="fileSearchTest\MD\20140818\IMDB_20140818_MDIDX_R_20140819105010.csv" />
+    <Content Include="fileSearchTest\MD\20140818\IMDB_20140818_MDIRC_R_20140818194519.csv" />
+    <Content Include="fileSearchTest\MD\20140818\IMDB_20140818_MDIRIV_R_20140818192509.csv" />
+    <Content Include="fileSearchTest\MD\20140818\IMDB_20140818_MDLP_R_20140818200036.csv" />
+    <Content Include="fileSearchTest\MD\20140818\ir_swap_treasury20140818.csv" />
+    <Content Include="fileSearchTest\MD\20140818\ir_swap_zero_curve20140818.csv" />
+    <Content Include="fileSearchTest\MD\20140818\swaption_implied_volatility20140818.csv" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
 </Project>
