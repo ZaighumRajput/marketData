@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>b1c16533-50be-41ef-a17b-06ca163581e2</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>fileParsers\__init__.py</StartupFile>
+    <StartupFile>inputFunctions\pandaLoad.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,8 +22,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="fileParsers\module1.py" />
-    <Compile Include="fileParsers\__init__.py" />
+    <Compile Include="inputFunctions\pandaLoad.py" />
     <Compile Include="inputFunctions\fileSearch.py" />
     <Compile Include="inputFunctions\marketDataQuality.py" />
   </ItemGroup>
@@ -38,7 +37,6 @@
     <Folder Include="package1\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fileParsers\__init__.pyc" />
     <Content Include="fileSearchTest\MD\20140814\equity_imp_vol_surface20140814.csv" />
     <Content Include="fileSearchTest\MD\20140814\equity_real_estate_index_curve20140814.csv" />
     <Content Include="fileSearchTest\MD\20140814\EQ_Volatility_Indices_2014-08-14_0830_LON.xls" />
