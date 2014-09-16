@@ -17,14 +17,14 @@ def getDataSeries(date, what,marketDataFolder, dataSpecific=[], source="IMDB", D
     if(DEBUG): "I am going to try to read in the following file", filePath
         
     dataSeries = pd.read_csv(filePath, usecols=[2,14,17], skipfooter=1, skiprows=1, header=None)
-    arguments = "pd.read_csv(filePath)"
+    arguments = "pd.read_csv(filePath," + imdbConfig["EQIV"] + ",skipfooter=1, skiprows=1, header=None)"
     print dataSeries
     dataSeries1 = eval(arguments)
 
 
 
 #Which columns are important
-     
+imdbConfig = {"EQIV": "usecols=[2,14,17]"}     
 
 
 
@@ -36,6 +36,7 @@ if __name__ == "__main__":
 
     
     test_getDataSeries()
+
 
     
     
