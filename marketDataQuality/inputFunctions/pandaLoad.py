@@ -23,7 +23,7 @@ def getDataSeries(date, what,marketDataFolder, dataSpecific=[], source="IMDB", D
 
 
 #Which columns are important
-imdbConfig = {"IDXIV": 'usecols=[1,6,8,14,17], names=["Date", "Index", "Expiry", "Moneyness", "Volatility"], index_col = ["Date"]',
+imdbConfig = {"IDXIV": 'usecols=[1,5,8,14,17], names=["Date", "Index", "Expiry", "Moneyness", "Volatility"]',
               "FX": 'usecols = [1,5,9], names = ["Date", "Key", "Exchange Rate"], index_col =["Date"]',
               "IRC" : 'usecols = [1,5,6,8,17], names = ["Date", "Key", "Description", "Maturity", "InterestRate"], index_col = ["Date"]' }     
               
