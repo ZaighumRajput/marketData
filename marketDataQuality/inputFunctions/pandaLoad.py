@@ -3,7 +3,7 @@
 import pandas as pd
 import fileSearch
 
-#take in date object?
+#take in date object? or allow both?
 def getDataSeries(dates, what, marketDataFolder, dataSpecific=[], source="IMDB",  DEBUG=False):
 
     if type(dates)  is not list: dates = [dates] #to allow user passing in just one date that is not in a list
