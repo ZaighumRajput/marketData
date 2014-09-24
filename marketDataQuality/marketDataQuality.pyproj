@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>b1c16533-50be-41ef-a17b-06ca163581e2</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>deltaFunctions\idxIVChanges.py</StartupFile>
+    <StartupFile>Gui\Example.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -23,6 +23,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="deltaFunctions\idxIVChanges.py" />
+    <Compile Include="Gui\Example.py" />
     <Compile Include="inputFunctions\pandaLoad.py" />
     <Compile Include="inputFunctions\fileSearch.py" />
     <Compile Include="inputFunctions\marketDataQuality.py" />
@@ -36,6 +37,7 @@
     <Folder Include="fileSearchTest\MD\20140818\" />
     <Folder Include="inputFunctions\" />
     <Folder Include="deltaFunctions\" />
+    <Folder Include="Gui\" />
     <Folder Include="package1\" />
   </ItemGroup>
   <ItemGroup>
