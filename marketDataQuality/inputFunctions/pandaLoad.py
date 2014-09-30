@@ -6,8 +6,12 @@ import fileSearch
 #take in date object? or allow both?
 def getDataSeries(dates, what, marketDataFolder, dataSpecific=[], source="IMDB",  DEBUG=False):
 
+    dates = dates.map(lambda x: x.strftime("%Y%m%d")).tolist()
+
+    
     if type(dates)  is not list: dates = [dates] #to allow user passing in just one date that is not in a list
     
+
     dataSeries = getDataSeriesSingle(dates.pop(), what, marketDataFolder) #make the anchor dataframe, so we can attach others to it
     
     for dt in dates:
@@ -27,6 +31,7 @@ def getDataSeriesSingle(date, what,marketDataFolder, dataSpecific=[], source="IM
     getDataSeries("20140818", FX, ['JPY']) => subset of pdf.df
     '''
 
+    #dateStr = date.strftime("%Y%m%d")
 
     filePath= fileSearch.findFile2(date, what, marketDataFolder)
     if(DEBUG): "I am going to try to read in the following file", filePath
@@ -64,9 +69,6 @@ pivotConfig = {
                "IDX" : "rows = ['Date'], values = 'IndexLevel', cols = ['Key', 'Description']",
                "LP" : "rows = ['Date', 'Maturity'], values = 'ILPLevel', cols = 'Key'"
                }
-
-
-
 
 if __name__ == "__main__":
 
