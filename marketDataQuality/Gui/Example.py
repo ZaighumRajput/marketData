@@ -1,4 +1,4 @@
-"EXAMPLE"
+"EXAMPLE 1"
 import sys
 
 from PyQt4 import QtGui
