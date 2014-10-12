@@ -1,4 +1,3 @@
-#Zetcode PyQt4 Tutorial
 import sys
 
 from PyQt4 import QtGui
